@@ -7,6 +7,10 @@ public class NumerosRomanos {
 
     public NumerosRomanos(int numero) {
         this.numero = numero;
+        popularRomanosNumeral();
+    }
+
+    private void popularRomanosNumeral() {
         romanosNumeral.put(1000, "M");
         romanosNumeral.put(900, "CM");
         romanosNumeral.put(500, "D");

@@ -35,6 +35,11 @@ public class NumerosRomanosTest {
         verificarAssert(9, "IX");
     }
 
+    @Test
+    public void testNumero49() {
+        verificarAssert(49, "XLIX");
+    }
+
     private void verificarAssert(int numero, String numeroEmRomanos) {
         final NumerosRomanos numeroRomano = new NumerosRomanos(numero);
         assertThat(numero + " deveria ser " + numeroEmRomanos, numeroRomano.toString(), equalTo(numeroEmRomanos));
