@@ -28,16 +28,20 @@ public class NumerosRomanos {
 
 
     private String converter(int numeral) {
-        if(numeral == 0) {
+        if (isZero(numeral)) {
             return "";
         }
 
-        int numeralReferencia =  romanosNumeral.floorKey(numeral);
-        if ( numeral == numeralReferencia ) {
+        int numeralReferencia = romanosNumeral.floorKey(numeral);
+        if (numeral == numeralReferencia) {
             return romanosNumeral.get(numeral);
         }
         return romanosNumeral.get(numeralReferencia) +
                 converter(numeral- numeralReferencia);
+    }
+
+    private boolean isZero(int numeral) {
+        return numeral == 0;
     }
 
     @Override
