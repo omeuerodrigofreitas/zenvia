@@ -5,6 +5,12 @@ import static org.junit.Assert.assertThat;
 
 public class NumerosRomanosTest {
 
+
+    @Test
+    public void testNumeroNegativo10() {
+        verificarAssert(-10, "");
+    }
+
     @Test
     public void testNumeroZero() {
         verificarAssert(0, "");

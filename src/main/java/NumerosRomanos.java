@@ -28,7 +28,7 @@ public class NumerosRomanos {
 
 
     private String converter(int numeral) {
-        if (isZero(numeral)) {
+        if (isMenorIgualZero(numeral)) {
             return "";
         }
 
@@ -40,8 +40,8 @@ public class NumerosRomanos {
                 converter(numeral - numeralReferencia);
     }
 
-    private boolean isZero(int numeral) {
-        return numeral == 0;
+    private boolean isMenorIgualZero(int numeral) {
+        return numeral <= 0;
     }
 
     @Override
