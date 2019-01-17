@@ -6,6 +6,11 @@ import static org.junit.Assert.assertThat;
 public class NumerosRomanosTest {
 
     @Test
+    public void testNumeroZero() {
+        verificarAssert(0, "");
+    }
+
+    @Test
     public void testNumero1() {
         verificarAssert(1, "I");
     }

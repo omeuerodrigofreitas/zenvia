@@ -28,6 +28,9 @@ public class NumerosRomanos {
 
 
     private String converter(int numeral) {
+        if(numeral == 0) {
+            return "";
+        }
 
         int numeralReferencia =  romanosNumeral.floorKey(numeral);
         if ( numeral == numeralReferencia ) {
