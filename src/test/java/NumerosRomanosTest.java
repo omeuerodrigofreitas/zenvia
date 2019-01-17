@@ -47,8 +47,18 @@ public class NumerosRomanosTest {
     }
 
     @Test
+    public void testNumero10() {
+        verificarAssert(10, "X");
+    }
+
+    @Test
     public void testNumero49() {
         verificarAssert(49, "XLIX");
+    }
+
+    @Test
+    public void testNumero1101() {
+        verificarAssert(1101, "MCI");
     }
 
     private void verificarAssert(int numero, String numeroEmRomanos) {

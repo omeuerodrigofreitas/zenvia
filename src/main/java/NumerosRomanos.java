@@ -31,13 +31,16 @@ public class NumerosRomanos {
         if (isMenorIgualZero(numeral)) {
             return "";
         }
+        return getEmRomanos(numeral);
+    }
 
+    private String getEmRomanos(int numeral) {
         int numeralReferencia = romanosNumeral.floorKey(numeral);
         if (numeral == numeralReferencia) {
             return romanosNumeral.get(numeral);
         }
         return romanosNumeral.get(numeralReferencia) +
-                converter(numeral - numeralReferencia);
+                getEmRomanos(numeral - numeralReferencia);
     }
 
     private boolean isMenorIgualZero(int numeral) {
