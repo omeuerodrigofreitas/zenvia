@@ -37,7 +37,7 @@ public class NumerosRomanos {
             return romanosNumeral.get(numeral);
         }
         return romanosNumeral.get(numeralReferencia) +
-                converter(numeral- numeralReferencia);
+                converter(numeral - numeralReferencia);
     }
 
     private boolean isZero(int numeral) {
